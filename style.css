@@ -1,0 +1,160 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul {
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  /* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+img {
+  vertical-align: middle;
+}
+/* General STYLE */
+@font-face {
+  font-family: 'Manrope';
+  src: url('./fonts/Manrope-ExtraLight.woff2') format('woff2'),
+       url('./fonts/Manrope-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-display: swap; /*temporarily show a system font to avoid showing invisible text while custom fonts load*/
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('./fonts/Manrope-Medium.woff2') format('woff2'),
+       url('./fonts/Manrope-Medium.woff') format('woff');
+  font-weight: 400;
+  font-display: swap; /*temporarily show a system font to avoid showing invisible text while custom fonts load*/
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('./fonts/Manrope-SemiBold.woff2') format('woff2'),
+       url('./fonts/Manrope-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap; /*temporarily show a system font to avoid showing invisible text while custom fonts load*/
+}
+
+@font-face {
+  font-family: 'Space grotesk';
+  src: url('./fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+       url('./fonts/SpaceGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap; 
+}
+
+
+:root {
+    --color1:hsl(193, 38%, 86%);
+    --color2:hsl(150, 100%, 66%);
+    --color3: hsl(217, 19%, 38%);
+    --color4: hsl(217, 19%, 24%);
+    --color5: hsl(218, 23%, 16%);
+
+    --ffparagraph: "Epilogue", system-ui, sans-serif;
+    --ffblockquote: "Space grotesk", system-ui, sans-serif;
+
+    --fsparagraph: 1rem;
+}
+body {
+    padding:0 1.5rem;
+    font-family: var(--ffparagraph);
+    text-rendering: optimizeSpeed;
+    text-align:left; 
+    background: var(--color5);
+    /* to center the content vertical & horizontal */
+    min-height: 100vh;  
+    display:flex;
+    flex-direction: column;
+}
+h1, h2, h3, ul {
+    padding:0;
+}
+main {
+  max-width:21.438rem;
+  padding:3.15rem 3.5rem 4.7rem 3.5rem;
+  margin:auto;
+  background: var(--color4);
+  text-align: center;
+  border-radius:1rem;
+  position:relative;
+  align-self:center;
+}
+h1{
+  font-size:0.8rem;
+  color:var(--color2);
+  font-weight:200;
+  letter-spacing:0.33rem;
+  text-transform: uppercase;
+}
+blockquote p::before {
+  content: open-quote;
+  font-family: var(--ffblockquote) !important;
+  font-weight:300;
+}
+  blockquote p::after{
+  content:close-quote;
+  font-family: var(--ffblockquote) !important;
+  font-weight:300;
+}
+  
+p {
+  font-size:1.78rem;
+  line-height:2.3rem;
+  color:var(--color1);
+  font-weight:600;
+  letter-spacing:0.03rem;
+  padding:1.6rem 0 3.5rem 0;
+  background: url(./images/pattern-divider-mobile.svg) no-repeat bottom center;
+}
+#button {
+  background: var(--color2) url(./images/icon-dice.svg) no-repeat center;
+  width:4rem;
+  height:4rem;
+  cursor:pointer;
+  padding:0;
+  border:0;
+  outline:0;
+  border-radius:50%;
+  box-shadow: 0 0 0.5rem 0.5rem rgba(83, 255, 171, 0);
+  transition: box-shadow 0.5s, transform 0.5s;
+  position:absolute;
+  bottom:-2rem;
+  left:calc(50% - 2rem);
+}
+#button:hover, #button:active{
+  box-shadow: 0 0 1rem 0.5rem rgba(83, 255, 171, 0.3);
+  transform:rotate(180deg);
+}
+#button:active {
+  transform: scale(70%);
+}
+
+
+footer {margin:1.5rem auto 0.2rem auto;}
+footer, footer a { font-size: 11px; text-align: center; color: var(--color3);}
+
+
+
+@media screen and (min-width:40rem) {
+  body {
+    padding:0 2rem; 
+  }
+  
+  main {
+    max-width: 33.75rem;
+  }
+  p {
+    background: url(./images/pattern-divider-desktop.svg) no-repeat bottom center;
+  }
+  /* footer {position:fixed; bottom:0%; left: 42%;} */
+}
