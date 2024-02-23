@@ -109,6 +109,7 @@ blockquote p::before {
   
 p {
   font-size:1.78rem;
+  font-family: var(--ffparagraph);
   line-height:2.3rem;
   color:var(--color1);
   font-weight:600;
