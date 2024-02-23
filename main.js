@@ -9,7 +9,7 @@ button.addEventListener('click', ()=> {
 
     fetchData(); 
 })
-async function fetchData(pokemonName){
+async function fetchData(){
     try{
         const response = await fetch(`https://api.adviceslip.com/advice`)
 
@@ -18,7 +18,7 @@ async function fetchData(pokemonName){
         }
         const data = await response.json();
         adviceHolder.innerText = data.slip.advice;
-        adviceId.innerText = `${data.slip.id}`;
+        adviceId.innerText = data.slip.id;
     }
     catch(error){
         console.log(error);

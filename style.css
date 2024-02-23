@@ -22,6 +22,7 @@ img {
   vertical-align: middle;
 }
 /* General STYLE */
+
 @font-face {
   font-family: 'Manrope';
   src: url('./fonts/Manrope-ExtraLight.woff2') format('woff2'),
@@ -60,7 +61,7 @@ img {
     --color4: hsl(217, 19%, 24%);
     --color5: hsl(218, 23%, 16%);
 
-    --ffparagraph: "Epilogue", system-ui, sans-serif;
+    --ffparagraph: "Manrope", system-ui, sans-serif;
     --ffblockquote: "Space grotesk", system-ui, sans-serif;
 
     --fsparagraph: 1rem;
@@ -81,7 +82,7 @@ h1, h2, h3, ul {
 }
 main {
   max-width:21.438rem;
-  padding:3.15rem 3.5rem 4.7rem 3.5rem;
+  padding:3.15rem 3rem 4.7rem 3rem;
   margin:auto;
   background: var(--color4);
   text-align: center;
@@ -90,7 +91,7 @@ main {
   align-self:center;
 }
 h1{
-  font-size:0.8rem;
+  font-size:0.75rem;
   color:var(--color2);
   font-weight:200;
   letter-spacing:0.33rem;
@@ -98,22 +99,21 @@ h1{
 }
 blockquote p::before {
   content: open-quote;
-  font-family: var(--ffblockquote) !important;
-  font-weight:300;
+  /* font-family: var(--ffblockquote) !important; */
+  /* font-weight:300; */
 }
   blockquote p::after{
   content:close-quote;
-  font-family: var(--ffblockquote) !important;
-  font-weight:300;
+  /* font-family: var(--ffblockquote) !important; */
+  /* font-weight:300; */
 }
   
 p {
-  font-size:1.78rem;
+  font-size:1.75rem;
   font-family: var(--ffparagraph);
   line-height:2.3rem;
   color:var(--color1);
-  font-weight:600;
-  letter-spacing:0.03rem;
+  font-weight:800;
   padding:1.6rem 0 3.5rem 0;
   background: url(./images/pattern-divider-mobile.svg) no-repeat bottom center;
 }
